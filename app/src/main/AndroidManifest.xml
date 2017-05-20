@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.macbook.cs49902">
+    package="cs499.project.macbook.homekitchen">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="cs499.project.macbook.homekitchen.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,11 +17,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Main2Activity"
-                  android:label="@string/title_activity_Main2Activity">
-                  //android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+        <activity
+            android:name="cs499.project.macbook.homekitchen.ArabicFood"
+            android:label="@string/title_activity_ArabicFood" />
+        <activity android:name="cs499.project.macbook.homekitchen.AmericanFood"
+            android:label="@string/title_activity_AmericanFood"/>
+        <activity android:name="cs499.project.macbook.homekitchen.ChinessFood"
+            android:label="@string/title_activity_ChinessFood"/>
+        <activity android:name="cs499.project.macbook.homekitchen.MaxicanFood"
+            android:label="@string/title_activity_MaxicanFood">
 
+        </activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.macbook.cs49902;
+package cs499.project.macbook.homekitchen;
 
 import org.junit.Test;
 

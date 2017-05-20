@@ -1,4 +1,10 @@
 <resources>
-    <string name="app_name">CS499.02</string>
-    <string name="title_activity_Main2Activity">Main2Activity</string>
+    <string name="app_name">Home Kitchen</string>
+    <string name="title_activity_ArabicFood">Arabic Food</string>
+    <string name="title_activity_AmericanFood">American Food</string>
+    <string name="title_activity_ChinessFood">Chiness Food</string>
+    <string name="title_activity_MaxicanFood">Maxican Food</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
