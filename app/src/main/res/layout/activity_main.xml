@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/kitchenfood"
-    tools:context="com.project.macbook.homeKitchen.CS499.project.macbook.homeKitchen.MainActivity">
+    tools:context="cs499.project.macbook.homekitchen.MainActivity">
 
         <LinearLayout
             android:layout_width="395dp"
@@ -22,28 +22,36 @@
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Arabic Food" />
+                android:text="Arabic Food"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
 
             <Button
                 android:id="@+id/button2"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="American Food" />
+                android:text="American Food"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
 
             <Button
                 android:id="@+id/button3"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chiness Food" />
+                android:text="Chiness Food"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
 
             <Button
                 android:id="@+id/button4"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Maxican Food" />
+                android:text="Maxican Food"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
 
         </LinearLayout>
 
