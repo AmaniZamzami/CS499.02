@@ -1,10 +1,7 @@
 package cs499.project.macbook.homekitchen;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class ArabicFood extends AppCompatActivity {
@@ -26,9 +23,9 @@ public class ArabicFood extends AppCompatActivity {
         setContentView(R.layout.activity_arabic_food);
 
         mListView = (ListView) findViewById(R.id.listview);
-        MyAdapter myAdapter = new MyAdapter(ArabicFood.this, foodNames, foodPic);
+        MyAdapter myAdapter = new MyAdapter(ArabicFood.this, foodNames, foodPic, foodRecipe);
         mListView.setAdapter(myAdapter);
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mIntent = new Intent(ArabicFood.this, DetailActivity.class);
@@ -36,7 +33,7 @@ public class ArabicFood extends AppCompatActivity {
                 mIntent.putExtra("Food Recipe", foodRecipe[i]);
                 startActivity(mIntent);
             }
-        });
+        });*/
     }
 
 }
