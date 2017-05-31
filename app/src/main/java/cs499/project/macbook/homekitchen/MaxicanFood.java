@@ -26,14 +26,14 @@ public class MaxicanFood extends AppCompatActivity {
         setContentView(R.layout.activity_maxican_food);
 
         mListView = (ListView) findViewById(R.id.listview);
-        MyAdapter myAdapter = new MyAdapter(MaxicanFood.this, foodPic, foodRecipe);
+        MyAdapter myAdapter = new MyAdapter(MaxicanFood.this, foodNames, foodPic);
         mListView.setAdapter(myAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mIntent = new Intent(MaxicanFood.this, DetailActivity.class);
-                mIntent.putExtra("Food Name", foodNames[i]);
                 mIntent.putExtra("Food Picture", foodPic[i]);
+                mIntent.putExtra("Food Recipe", foodRecipe[i]);
                 startActivity(mIntent);
             }
         });

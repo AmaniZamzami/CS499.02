@@ -7,23 +7,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MyAdapter extends ArrayAdapter<String> {
 
+    String[] names;
     int[] pic;
-    int[] recipe;
+    //int [] recipe;
     Context mContext;
 
-    public MyAdapter(Context context, int[] foodPic, int[] foodRecipe) {
+    public MyAdapter(Context context, String[] foodName, int[] foodPic) {
         super(context, R.layout.listview_item);
+        this.names = foodName;
         this.pic = foodPic;
-        this.recipe = foodRecipe;
         this.mContext = context;
     }
 
     @Override
     public int getCount() {
-        return pic.length;
+        return names.length;
     }
 
     @NonNull
@@ -35,19 +37,19 @@ public class MyAdapter extends ArrayAdapter<String> {
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = mInflater.inflate(R.layout.listview_item, parent, false);
             mViewHolder.mPic = (ImageView) convertView.findViewById(R.id.imageView);
-            mViewHolder.mRecipe = (ImageView) convertView.findViewById(R.id.imageView);
+            mViewHolder.mNames = (TextView) convertView.findViewById(R.id.textView);
             convertView.setTag(mViewHolder);
         } else {
             mViewHolder = (ViewHolder) convertView.getTag();
         }
         mViewHolder.mPic.setImageResource(pic[position]);
-        mViewHolder.mRecipe.setImageResource(recipe[position]);
+        mViewHolder.mNames.setText(names[position]);
 
         return convertView;
     }
 
     static class ViewHolder {
         ImageView mPic;
-        ImageView mRecipe;
+        TextView mNames;
     }
 }

@@ -26,14 +26,14 @@ public class AmericanFood extends AppCompatActivity {
         setContentView(R.layout.activity_american_food);
 
         mListView = (ListView) findViewById(R.id.listview);
-        MyAdapter myAdapter = new MyAdapter(AmericanFood.this, foodPic, foodRecipe);
+        MyAdapter myAdapter = new MyAdapter(AmericanFood.this, foodNames, foodPic);
         mListView.setAdapter(myAdapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mIntent = new Intent(AmericanFood.this, DetailActivity.class);
-                mIntent.putExtra("Food Name", foodNames[i]);
                 mIntent.putExtra("Food Picture", foodPic[i]);
+                mIntent.putExtra("Food Recipe", foodRecipe[i]);
                 startActivity(mIntent);
             }
         });
