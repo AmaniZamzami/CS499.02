@@ -9,25 +9,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="cs499.project.macbook.homekitchen.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ArabicFood"
+            android:label="@string/title_activity_ArabicFood" />
+        <activity
+            android:name=".AmericanFood"
+            android:label="@string/title_activity_AmericanFood" />
+        <activity
+            android:name=".ChinessFood"
+            android:label="@string/title_activity_ChinessFood" />
 
         <activity
-            android:name="cs499.project.macbook.homekitchen.ArabicFood"
-            android:label="@string/title_activity_ArabicFood" />
-        <activity android:name="cs499.project.macbook.homekitchen.AmericanFood"
-            android:label="@string/title_activity_AmericanFood"/>
-        <activity android:name="cs499.project.macbook.homekitchen.ChinessFood"
-            android:label="@string/title_activity_ChinessFood"/>
-        <activity android:name="cs499.project.macbook.homekitchen.MaxicanFood"
-            android:label="@string/title_activity_MaxicanFood">
+            android:name=".DetailActivity"
+            android:label="DetailActivity"/>
 
-        </activity>
+        <activity
+            android:name=".MaxicanFood"
+            android:label="@string/title_activity_MaxicanFood"></activity>
     </application>
 
 </manifest>

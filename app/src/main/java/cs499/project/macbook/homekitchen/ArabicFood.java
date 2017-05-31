@@ -1,12 +1,12 @@
 package cs499.project.macbook.homekitchen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.content.Intent;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.support.v7.widget.Toolbar;
 
 public class ArabicFood extends AppCompatActivity {
 
@@ -29,6 +29,7 @@ public class ArabicFood extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(getResources().getString(R.string.app_name));
+
         mListView = (ListView) findViewById(R.id.listview);
         MyAdapter myAdapter = new MyAdapter(ArabicFood.this, foodPic, foodRecipe);
         mListView.setAdapter(myAdapter);
@@ -36,12 +37,11 @@ public class ArabicFood extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mIntent = new Intent(ArabicFood.this, DetailActivity.class);
-                mIntent.putExtra("Food Name", foodNames[i]);
-                mIntent.putExtra("Food Picture", foodPic[i]);
+                mIntent.putExtra("foodName", foodNames[i]);
+                mIntent.putExtra("foodPic", foodPic[i]);
                 startActivity(mIntent);
             }
         });
-
     }
 
 }

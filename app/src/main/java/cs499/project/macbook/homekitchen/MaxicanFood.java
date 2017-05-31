@@ -1,16 +1,14 @@
 package cs499.project.macbook.homekitchen;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MaxicanFood extends AppCompatActivity {
 
-    Toolbar mToolbar;
     ListView mListView;
 
     String[] foodNames = {"Nachos Grande", "Vampire Tacos", "Sunny-Side Chili"};
@@ -27,8 +25,6 @@ public class MaxicanFood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maxican_food);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mToolbar.setTitle(getResources().getString(R.string.app_name));
         mListView = (ListView) findViewById(R.id.listview);
         MyAdapter myAdapter = new MyAdapter(MaxicanFood.this, foodPic, foodRecipe);
         mListView.setAdapter(myAdapter);

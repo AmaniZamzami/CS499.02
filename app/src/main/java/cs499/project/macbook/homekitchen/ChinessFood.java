@@ -1,12 +1,12 @@
 package cs499.project.macbook.homekitchen;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.support.v7.widget.Toolbar;
 
 public class ChinessFood extends AppCompatActivity {
 
@@ -29,6 +29,7 @@ public class ChinessFood extends AppCompatActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle(getResources().getString(R.string.app_name));
+
         mListView = (ListView) findViewById(R.id.listview);
         MyAdapter myAdapter = new MyAdapter(ChinessFood.this, foodPic, foodRecipe);
         mListView.setAdapter(myAdapter);
